@@ -1,0 +1,24 @@
+# ninja log v5
+0	272	7059563975042963	CMakeFiles/OpenGL_project.dir/main.cpp.obj	9a170ddd068a9165
+273	400	7059563976277566	OpenGL_project.exe	c6cc97867f423f2
+1	167	7071536582658370	build.ninja	9ec2a8e0778b342e
+19	1132	7071536662250164	CMakeFiles/Ini_OpenGL.dir/main.cpp.obj	1a711f72e5aeef9d
+28	1923	7071536670106844	dependencies/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj	34ab3267398f2954
+89	1955	7071536670386831	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj	8f7df4ad2f4326d
+39	1967	7071536670376840	dependencies/glfw/src/CMakeFiles/glfw.dir/init.c.obj	59b84a77ee6346ad
+66	1987	7071536670729703	dependencies/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj	d35241f8c14d5c73
+11	2009	7071536670934844	dependencies/glfw/src/CMakeFiles/glfw.dir/context.c.obj	1a33996c9431ed0
+78	2033	7071536671028208	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	c55f63f0bfb5f653
+51	2216	7071536672864727	dependencies/glfw/src/CMakeFiles/glfw.dir/input.c.obj	a45c81ec6a4b3557
+1	2306	7071536673912348	CMakeFiles/glad.dir/dependencies/glad/src/glad.c.obj	dada35257c831af9
+2307	2999	7071536680552644	libglad.a	27699f43f086a275
+1137	3070	7071536681401757	dependencies/glfw/src/CMakeFiles/glfw.dir/window.c.obj	4025a8ed129a1e0
+1955	3762	7071536688551285	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj	8566e716b33e398c
+1927	3769	7071536688582329	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj	1f3198fe4886085d
+1968	3811	7071536689030954	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	7d91843c13d490dd
+1989	3892	7071536689858724	dependencies/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj	cdce2cd6fff8f551
+2034	3932	7071536690258672	dependencies/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj	1717c77e19a8a506
+2217	4006	7071536690999952	dependencies/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	296a48237528c8c8
+2010	4052	7071536691489121	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	beac3d761df0d819
+4053	4196	7071536692929110	dependencies/glfw/src/libglfw3.a	5066af6493130261
+4196	4474	7071536695609399	Ini_OpenGL.exe	487d973035e892d7
