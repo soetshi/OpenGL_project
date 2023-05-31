@@ -1,12 +1,12 @@
 # ninja log v5
 0	272	7059563975042963	CMakeFiles/OpenGL_project.dir/main.cpp.obj	9a170ddd068a9165
-273	400	7059563976277566	OpenGL_project.exe	c6cc97867f423f2
-1	167	7071536582658370	build.ninja	9ec2a8e0778b342e
 19	1132	7071536662250164	CMakeFiles/Ini_OpenGL.dir/main.cpp.obj	1a711f72e5aeef9d
+273	400	7059563976277566	OpenGL_project.exe	c6cc97867f423f2
+1	167	7072388350912490	build.ninja	9ec2a8e0778b342e
 28	1923	7071536670106844	dependencies/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj	34ab3267398f2954
-89	1955	7071536670386831	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj	8f7df4ad2f4326d
 39	1967	7071536670376840	dependencies/glfw/src/CMakeFiles/glfw.dir/init.c.obj	59b84a77ee6346ad
 66	1987	7071536670729703	dependencies/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj	d35241f8c14d5c73
+89	1955	7071536670386831	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj	8f7df4ad2f4326d
 11	2009	7071536670934844	dependencies/glfw/src/CMakeFiles/glfw.dir/context.c.obj	1a33996c9431ed0
 78	2033	7071536671028208	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	c55f63f0bfb5f653
 51	2216	7071536672864727	dependencies/glfw/src/CMakeFiles/glfw.dir/input.c.obj	a45c81ec6a4b3557
@@ -22,3 +22,7 @@
 2010	4052	7071536691489121	dependencies/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	beac3d761df0d819
 4053	4196	7071536692929110	dependencies/glfw/src/libglfw3.a	5066af6493130261
 4196	4474	7071536695609399	Ini_OpenGL.exe	487d973035e892d7
+16	301	7072388387519695	CMakeFiles/Ini_OpenGL.dir/main.cpp.obj	4bd7e506ad653606
+7	1499	7072388399503936	CMakeFiles/glad.dir/dependencies/glad/src/glad.c.obj	59b25395936cf92a
+1499	1663	7072388401136312	libglad.a	27699f43f086a275
+1663	2112	7072388405557480	Ini_OpenGL.exe	487d973035e892d7

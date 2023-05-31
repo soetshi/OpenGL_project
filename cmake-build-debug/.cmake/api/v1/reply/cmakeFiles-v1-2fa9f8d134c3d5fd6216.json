@@ -216,16 +216,6 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckIncludeFile.c.in"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckIncludeFile.c.in"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
 			"path" : "C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/cmake/win/x64/share/cmake-3.24/Modules/CheckCCompilerFlag.cmake"
 		},
 		{

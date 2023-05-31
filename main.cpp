@@ -1,115 +1,194 @@
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
 
-struct Color3f {
-    float r, g, b;
-    Color3f() {}
-    Color3f(float _r, float _g, float _b) : r(_r), g(_g), b(_b) {}
-};
 
-struct Point2f {
-    float x, y;
-    Point2f() {}
-    Point2f(float _x, float _y) : x(_x), y(_y) {}
-};
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 480
 
-struct Vertex {
-    Point2f position;
-    Color3f color;
-    Vertex() {}
-    Vertex(Point2f _position, Color3f _color) : position(_position), color(_color) {}
-};
+void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength);
 
-struct Application {
-    int m_width = 1280;
-    int m_height = 720;
-
-    inline void setSize(int width, int height) {
-        m_width = width;
-        m_height = height;
-    }
-
-    bool initialize() {
-        std::cout << "Pilote : " << glGetString(GL_RENDERER) << std::endl;
-        std::cout << "OpenGL : " << glGetString(GL_RENDERER) << std::endl;
-        return true;
-    }
-
-    void deinitialized() {}
-
-    void render() {
-        glEnable(GL_SCISSOR_TEST);
-
-        glViewport(0, 0, m_width, m_height);
-
-        glScissor(0, 0, m_width, m_height);
-
-        glClearColor(0.5f, 0.5f, 0.5f, 1.f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        glDisable(GL_SCISSOR_TEST);
-
-        Vertex vertices[3] = {
-                Vertex(Point2f(-0.8f, -0.8f), Color3f(0.f, 0.f, 0.f)),
-                Vertex(Point2f(0.8f, -0.8f), Color3f(0.5f, 0.5f, 0.5f)),
-                Vertex(Point2f(0.f, 0.8f), Color3f(1.f, 1.f, 1.f))
-        };
-
-        glBegin(GL_TRIANGLES);
-
-        for (int i = 0; i < 3; ++i) {
-            glColor3f(vertices[i].color.r, vertices[i].color.g, vertices[i].color.b);
-            glVertex2f(vertices[i].position.x, vertices[i].position.y);
-        }
-
-        glEnd();
-
-        glFlush();
-    }
-};
+GLfloat rotationX = 0.0f;
+GLfloat rotationY = 0.0f;
 
 int main(void)
 {
-    Application app;
-
     GLFWwindow* window;
 
-    /* Initialize the library */
+    // Initialize the library
     if (!glfwInit())
+    {
         return -1;
+    }
 
-    /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    // Create a windowed mode window and its OpenGL context
+    window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Mon désespoir", NULL, NULL);
+
+    glfwSetKeyCallback(window, keyCallback);
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
+
+    int screenWidth, screenHeight;
+    glfwGetFramebufferSize(window, &screenWidth, &screenHeight);
+
     if (!window)
     {
         glfwTerminate();
         return -1;
     }
 
-    /* Make the window's context current */
+    // Make the window's context current
     glfwMakeContextCurrent(window);
 
-    app.initialize();
+    glViewport(0.0f, 0.0f, screenWidth, screenHeight);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, SCREEN_WIDTH, 0, SCREEN_HEIGHT, 0, 1000);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
 
-    /* Loop until the user closes the window */
+    GLfloat halfScreenWidth = SCREEN_WIDTH / 2;
+    GLfloat halfScreenHeight = SCREEN_HEIGHT / 2;
+
+    // Loop until the user closes the window
     while (!glfwWindowShouldClose(window))
     {
+        glClear(GL_COLOR_BUFFER_BIT);
 
-        int width, height;
-        glfwGetFramebufferSize(window, &width, &height);
-        app.setSize(width, height);
+        glPushMatrix();
+        glTranslatef(halfScreenWidth, halfScreenHeight, -500);
+        glRotatef(rotationX, 1, 0, 0);
+        glRotatef(rotationY, 0, 1, 0);
+        glTranslatef(-halfScreenWidth, -halfScreenHeight, 500);
 
-        app.render();
+        DrawCube(halfScreenWidth, halfScreenHeight, -500, 200);
 
-        /* Swap front and back buffers */
+        glPopMatrix();
+
         glfwSwapBuffers(window);
-
-        /* Poll for and process events */
         glfwPollEvents();
+
+
     }
 
-    app.deinitialized();
-
     glfwTerminate();
+
     return 0;
+}
+
+void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    const GLfloat rotationSpeed = 10;
+
+    if (action == GLFW_PRESS || action == GLFW_REPEAT)
+    {
+        switch (key)
+        {
+            case GLFW_KEY_UP:
+                rotationX -= rotationSpeed;
+                break;
+            case GLFW_KEY_DOWN:
+                rotationX += rotationSpeed;
+                break;
+            case GLFW_KEY_RIGHT:
+                rotationY += rotationSpeed;
+                break;
+            case GLFW_KEY_LEFT:
+                rotationY -= rotationSpeed;
+                break;
+        }
+    }
+}
+
+void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength)
+{
+    GLfloat halfSideLength = edgeLength * 0.5f;
+
+    GLfloat vertices[] =
+            {
+                    // Front face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Back face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom left
+
+                    // Left face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Right face
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Top face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Bottom face
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength  // bottom left
+            };
+
+    GLfloat colors[] =
+            {
+                    // Front face (red)
+                    1.0f, 0.0f, 0.0f, 1.0f, // top left
+                    1.0f, 0.0f, 0.0f, 1.0f, // top right
+                    1.0f, 0.0f, 0.0f, 1.0f, // bottom right
+                    1.0f, 0.0f, 0.0f, 1.0f, // bottom left
+
+                    // Back face (green)
+                    0.0f, 1.0f, 0.0f, 1.0f, // top left
+                    0.0f, 1.0f, 0.0f, 1.0f, // top right
+                    0.0f, 1.0f, 0.0f, 1.0f, // bottom right
+                    0.0f, 1.0f, 0.0f, 1.0f, // bottom left
+
+                    // Left face (blue)
+                    0.0f, 0.0f, 1.0f, 1.0f, // top left
+                    0.0f, 0.0f, 1.0f, 1.0f, // top right
+                    0.0f, 0.0f, 1.0f, 1.0f, // bottom right
+                    0.0f, 0.0f, 1.0f, 1.0f, // bottom left
+
+                    // Right face (yellow)
+                    1.0f, 1.0f, 0.0f, 1.0f, // top left
+                    1.0f, 1.0f, 0.0f, 1.0f, // top right
+                    1.0f, 1.0f, 0.0f, 1.0f, // bottom right
+                    1.0f, 1.0f, 0.0f, 1.0f, // bottom left
+
+                    // Top face (cyan)
+                    0.0f, 1.0f, 1.0f, 1.0f, // top left
+                    0.0f, 1.0f, 1.0f, 1.0f, // top right
+                    0.0f, 1.0f, 1.0f, 1.0f, // bottom right
+                    0.0f, 1.0f, 1.0f, 1.0f, // bottom left
+
+                    // Bottom face (magenta)
+                    1.0f, 0.0f, 1.0f, 1.0f, // top left
+                    1.0f, 0.0f, 1.0f, 1.0f, // top right
+                    1.0f, 0.0f, 1.0f, 1.0f, // bottom right
+                    1.0f, 0.0f, 1.0f, 1.0f  // bottom left
+            };
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glColorPointer(4, GL_FLOAT, 0, colors);
+
+    glDrawArrays(GL_QUADS, 0, 24);
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_COLOR_ARRAY);
 }

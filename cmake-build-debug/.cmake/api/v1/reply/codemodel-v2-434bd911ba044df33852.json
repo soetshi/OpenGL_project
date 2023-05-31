@@ -192,7 +192,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Ini_OpenGL::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Ini_OpenGL-Debug-80fb5d4459546e55e495.json",
+					"jsonFile" : "target-Ini_OpenGL-Debug-ea81b560401bfcb767b6.json",
 					"name" : "Ini_OpenGL",
 					"projectIndex" : 0
 				},
@@ -248,7 +248,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "glad::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-glad-Debug-4a5847f097f5fd21fccd.json",
+					"jsonFile" : "target-glad-Debug-59735071cd7791dbc837.json",
 					"name" : "glad",
 					"projectIndex" : 0
 				},
