@@ -99,10 +99,17 @@ public:
 };
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+void cursorPositionCallback(GLFWwindow* window, double xpos, double ypos);
+
 void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength);
 
 GLfloat rotationX = 0.0f;
 GLfloat rotationY = 0.0f;
+bool isDragging = false;
+double lastMouseX = 0.0;
+double lastMouseY = 0.0;
+
 
 int main(void)
 {
@@ -141,6 +148,11 @@ int main(void)
 
     GLfloat halfScreenWidth = SCREEN_WIDTH / 2;
     GLfloat halfScreenHeight = SCREEN_HEIGHT / 2;
+    glfwSetKeyCallback(window, keyCallback);
+    glfwSetMouseButtonCallback(window, mouseButtonCallback);
+    glfwSetCursorPosCallback(window, cursorPositionCallback);
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
 
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window))
@@ -191,6 +203,32 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
         }
     }
 }
+
+void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
+{
+    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+        isDragging = true;
+        glfwGetCursorPos(window, &lastMouseX, &lastMouseY);
+    }
+    else if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE) {
+        isDragging = false;
+    }
+}
+
+void cursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
+{
+    if (isDragging) {
+        double deltaX = xpos - lastMouseX;
+        double deltaY = ypos - lastMouseY;
+
+        rotationY += deltaX * 0.1f;
+        rotationX += deltaY * 0.1f;
+
+        lastMouseX = xpos;
+        lastMouseY = ypos;
+    }
+}
+
 
 void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength)
 {
