@@ -1,9 +1,102 @@
+#include <iostream>
+#include <cmath>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
+
+class Quaternion {
+
+private:
+
+    double w, x, y, z;
+
+public:
+
+    // Default constructor
+    Quaternion() : w(1.0), x(0.0), y(0.0), z(0.0) {}
+
+    // Constructor
+    Quaternion(double nw, double nx, double ny, double nz) : w(nw), x(nx), y(ny), z(nz) {}
+
+    // Addition Operations
+    Quaternion operator+(const Quaternion& q) const {
+
+        return Quaternion(w + q.w, x + q.x, y + q.y, z + q.z);
+
+    }
+
+    //Multiplication Operations
+    Quaternion operator*(const Quaternion& q) const {
+
+        double nw = w * q.w - x * q.x - y * q.y - z * q.z;
+        double nx = w * q.x + x * q.w + y * q.z - z * q.y;
+        double ny = w * q.y - x * q.z + y * q.w + z * q.x;
+        double nz = w * q.z + x * q.y - y * q.x + z * q.w;
+        return Quaternion(nw, nx, ny, nz);
+
+    }
+
+    // Conjugating
+    Quaternion conjugate() const {
+
+        return Quaternion(w, -x, -y, -z);
+
+    }
+
+    // Norm
+    double norm() const {
+
+        return std::sqrt(w * w + x * x + y * y + z * z);
+
+    }
+
+    //Unitary Quaternons
+    Quaternion unit() const {
+        double n = norm();
+        if (n != 0.0)
+            return Quaternion(w / n, x / n, y / n, z / n);
+        else
+            return Quaternion();
+    }
+
+    // Scalar product
+    double dot(const Quaternion& q) const {
+
+        return w * q.w + x * q.x + y * q.y + z * q.z;
+    }
+
+    //Vectorial product
+    Quaternion cross(const Quaternion& q) const {
+
+        double nw = 0.0;
+        double nx = y * q.z - z * q.y;
+        double ny = z * q.x - x * q.z;
+        double nz = x * q.y - y * q.x;
+        return Quaternion(nw, nx, ny, nz);
+
+    }
+
+    //Matrcial product
+    Quaternion multiply(const Quaternion& q) const {
+
+        double nw = w * q.w - x * q.x - y * q.y - z * q.z;
+        double nx = w * q.x + x * q.w + y * q.z - z * q.y;
+        double ny = w * q.y - x * q.z + y * q.w + z * q.x;
+        double nz = w * q.z + x * q.y - y * q.x + z * q.w;
+        return Quaternion(nw, nx, ny, nz);
+
+    }
+
+
+    double getW() const { return w; }
+    double getX() const { return x; }
+    double getY() const { return y; }
+    double getZ() const { return z; }
+
+};
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength);
