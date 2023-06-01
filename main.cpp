@@ -101,14 +101,16 @@ public:
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
 void cursorPositionCallback(GLFWwindow* window, double xpos, double ypos);
-
+void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength);
 
 GLfloat rotationX = 0.0f;
 GLfloat rotationY = 0.0f;
+GLfloat zoom = 1.0f;
 bool isDragging = false;
 double lastMouseX = 0.0;
 double lastMouseY = 0.0;
+
 
 
 int main(void)
@@ -122,7 +124,7 @@ int main(void)
     }
 
     // Create a windowed mode window and its OpenGL context
-    window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Mon désespoir", NULL, NULL);
+    window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Mon espoir", NULL, NULL);
 
     glfwSetKeyCallback(window, keyCallback);
     glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
@@ -151,6 +153,7 @@ int main(void)
     glfwSetKeyCallback(window, keyCallback);
     glfwSetMouseButtonCallback(window, mouseButtonCallback);
     glfwSetCursorPosCallback(window, cursorPositionCallback);
+    glfwSetScrollCallback(window, scrollCallback);
     glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
 
@@ -229,10 +232,25 @@ void cursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
     }
 }
 
+void scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    const GLfloat zoomSpeed = 0.1f;
+    zoom += yoffset * zoomSpeed;
+
+    // Limit the zoom range
+    if (zoom < 0.1f) {
+
+        zoom = 0.1f;
+    }
+    else if (zoom > 10.0f) {
+
+        zoom = 10.0f;
+    }
+}
 
 void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength)
 {
-    GLfloat halfSideLength = edgeLength * 0.5f;
+    GLfloat halfSideLength = edgeLength * 0.5f / zoom;
 
     GLfloat vertices[] =
             {
