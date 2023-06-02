@@ -1,13 +1,13 @@
-
 #include <iostream>
 #include <cmath>
-#include <array>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <array>
 
 
-#define SCREEN_WIDTH 640
-#define SCREEN_HEIGHT 480
+
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
 
 class Quaternion {
 
@@ -107,14 +107,17 @@ void scrollCallback(GLFWwindow* window, double xoffset, double yoffset);
 Quaternion MatrixToQuaternion(const std::array<std::array<double, 3>, 3>& matrix);
 std::array<std::array<double, 3>, 3> QuaternionToMatrix(const Quaternion& q);
 void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength);
+void DrawSecondCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength);
+void DrawThirdCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength);
 
 GLfloat rotationX = 0.0f;
 GLfloat rotationY = 0.0f;
+GLfloat rotationZ = 0.0f;
 GLfloat zoom = 1.0f;
 bool isDragging = false;
 double lastMouseX = 0.0;
 double lastMouseY = 0.0;
-
+const GLfloat rotationSpeed = 0.1;
 
 
 int main(void)
@@ -145,7 +148,7 @@ int main(void)
     // Make the window's context current
     glfwMakeContextCurrent(window);
 
-    glViewport(0.0f, 0.0f, screenWidth, screenHeight);
+    glViewport(0, 0, screenWidth, screenHeight); //
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(0, SCREEN_WIDTH, 0, SCREEN_HEIGHT, 0, 1000);
@@ -173,14 +176,17 @@ int main(void)
         glTranslatef(-halfScreenWidth, -halfScreenHeight, 500);
 
         DrawCube(halfScreenWidth, halfScreenHeight, -500, 200);
+        DrawSecondCube(halfScreenWidth + 250, halfScreenHeight, -500, 150); // Adjust the position and size of the second cube
+        DrawThirdCube(halfScreenWidth + 250, halfScreenHeight, -500, 150);
+
+        rotationZ += rotationSpeed;
 
         glPopMatrix();
 
         glfwSwapBuffers(window);
         glfwPollEvents();
-
-
     }
+
 
     glfwTerminate();
 
@@ -201,7 +207,6 @@ int main(void)
     std::cout << "Quaternion converted : " << convertedQuaternion.getW() << " "
               << convertedQuaternion.getX() << " " << convertedQuaternion.getY() << " "
               << convertedQuaternion.getZ() << std::endl;*/
-
 }
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -260,11 +265,8 @@ void scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 
     // Limit the zoom range
     if (zoom < 0.1f) {
-
         zoom = 0.1f;
-    }
-    else if (zoom > 10.0f) {
-
+    } else if (zoom > 10.0f) {
         zoom = 10.0f;
     }
 }
@@ -348,9 +350,9 @@ Quaternion MatrixToQuaternion(const std::array<std::array<double, 3>, 3>& matrix
     }
 }
 
-
 void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength)
 {
+
     GLfloat halfSideLength = edgeLength * 0.5f / zoom;
 
     GLfloat vertices[] =
@@ -441,4 +443,209 @@ void DrawCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloa
 
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_COLOR_ARRAY);
+}
+
+void DrawSecondCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength)
+{
+    GLfloat halfSideLength = edgeLength * 0.5f / zoom;
+    static GLfloat rotation = 0.0f;
+    rotation += 0.5f;
+
+    glPushMatrix();
+    glRotatef(rotationZ, 0, 0, 1);
+    glTranslatef(centerPosX, centerPosY, centerPosZ);
+    glRotatef(rotation, 1, 1, 1);
+    glTranslatef(-centerPosX, -centerPosY, -centerPosZ);
+
+    GLfloat vertices[] =
+            {
+                    // Front face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Back face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom left
+
+                    // Left face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Right face
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Top face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Bottom face
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength  // bottom left
+            };
+
+    GLfloat colors[] =
+            {
+                    // Front face (red)
+                    1.0f, 0.0f, 0.0f, 1.0f, // top left
+                    1.0f, 0.0f, 0.0f, 1.0f, // top right
+                    1.0f, 0.0f, 0.0f, 1.0f, // bottom right
+                    1.0f, 0.0f, 0.0f, 1.0f, // bottom left
+
+                    // Back face (green)
+                    0.0f, 1.0f, 0.0f, 1.0f, // top left
+                    0.0f, 1.0f, 0.0f, 1.0f, // top right
+                    0.0f, 1.0f, 0.0f, 1.0f, // bottom right
+                    0.0f, 1.0f, 0.0f, 1.0f, // bottom left
+
+                    // Left face (blue)
+                    0.0f, 0.0f, 1.0f, 1.0f, // top left
+                    0.0f, 0.0f, 1.0f, 1.0f, // top right
+                    0.0f, 0.0f, 1.0f, 1.0f, // bottom right
+                    0.0f, 0.0f, 1.0f, 1.0f, // bottom left
+
+                    // Right face (yellow)
+                    1.0f, 1.0f, 0.0f, 1.0f, // top left
+                    1.0f, 1.0f, 0.0f, 1.0f, // top right
+                    1.0f, 1.0f, 0.0f, 1.0f, // bottom right
+                    1.0f, 1.0f, 0.0f, 1.0f, // bottom left
+
+                    // Top face (cyan)
+                    0.0f, 1.0f, 1.0f, 1.0f, // top left
+                    0.0f, 1.0f, 1.0f, 1.0f, // top right
+                    0.0f, 1.0f, 1.0f, 1.0f, // bottom right
+                    0.0f, 1.0f, 1.0f, 1.0f, // bottom left
+
+                    // Bottom face (magenta)
+                    1.0f, 0.0f, 1.0f, 1.0f, // top left
+                    1.0f, 0.0f, 1.0f, 1.0f, // top right
+                    1.0f, 0.0f, 1.0f, 1.0f, // bottom right
+                    1.0f, 0.0f, 1.0f, 1.0f  // bottom left
+            };
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glColorPointer(4, GL_FLOAT, 0, colors);
+
+    glDrawArrays(GL_QUADS, 0, 24);
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_COLOR_ARRAY);
+    glPopMatrix();
+}
+
+void DrawThirdCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength)
+{
+    GLfloat halfSideLength = edgeLength * 0.5f / zoom;
+    static GLfloat rotation = 0.0f;
+    rotation += 0.1f;
+
+    glPushMatrix();
+    glTranslatef(centerPosX, centerPosY, centerPosZ);
+    glRotatef(rotation, 1, 1, 1);
+    glTranslatef(-centerPosX, -centerPosY, -centerPosZ);
+
+    GLfloat vertices[] =
+            {
+                    // Front face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Back face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom left
+
+                    // Left face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Right face
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Top face
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY + halfSideLength, centerPosZ + halfSideLength, // bottom left
+
+                    // Bottom face
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength, // top left
+                    centerPosX - halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // top right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ - halfSideLength, // bottom right
+                    centerPosX + halfSideLength, centerPosY - halfSideLength, centerPosZ + halfSideLength  // bottom left
+            };
+
+    GLfloat colors[] =
+            {
+                    // Front face (red)
+                    1.0f, 0.0f, 0.0f, 1.0f, // top left
+                    1.0f, 0.0f, 0.0f, 1.0f, // top right
+                    1.0f, 0.0f, 0.0f, 1.0f, // bottom right
+                    1.0f, 0.0f, 0.0f, 1.0f, // bottom left
+
+                    // Back face (green)
+                    0.0f, 1.0f, 0.0f, 1.0f, // top left
+                    0.0f, 1.0f, 0.0f, 1.0f, // top right
+                    0.0f, 1.0f, 0.0f, 1.0f, // bottom right
+                    0.0f, 1.0f, 0.0f, 1.0f, // bottom left
+
+                    // Left face (blue)
+                    0.0f, 0.0f, 1.0f, 1.0f, // top left
+                    0.0f, 0.0f, 1.0f, 1.0f, // top right
+                    0.0f, 0.0f, 1.0f, 1.0f, // bottom right
+                    0.0f, 0.0f, 1.0f, 1.0f, // bottom left
+
+                    // Right face (yellow)
+                    1.0f, 1.0f, 0.0f, 1.0f, // top left
+                    1.0f, 1.0f, 0.0f, 1.0f, // top right
+                    1.0f, 1.0f, 0.0f, 1.0f, // bottom right
+                    1.0f, 1.0f, 0.0f, 1.0f, // bottom left
+
+                    // Top face (cyan)
+                    0.0f, 1.0f, 1.0f, 1.0f, // top left
+                    0.0f, 1.0f, 1.0f, 1.0f, // top right
+                    0.0f, 1.0f, 1.0f, 1.0f, // bottom right
+                    0.0f, 1.0f, 1.0f, 1.0f, // bottom left
+
+                    // Bottom face (magenta)
+                    1.0f, 0.0f, 1.0f, 1.0f, // top left
+                    1.0f, 0.0f, 1.0f, 1.0f, // top right
+                    1.0f, 0.0f, 1.0f, 1.0f, // bottom right
+                    1.0f, 0.0f, 1.0f, 1.0f  // bottom left
+            };
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glColorPointer(4, GL_FLOAT, 0, colors);
+
+    glDrawArrays(GL_QUADS, 0, 24);
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_COLOR_ARRAY);
+    glPopMatrix();
 }
