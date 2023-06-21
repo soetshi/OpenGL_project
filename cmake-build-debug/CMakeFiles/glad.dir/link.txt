@@ -1,0 +1,2 @@
+C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\ar.exe qc libglad.a CMakeFiles/glad.dir/dependencies/glad/src/glad.c.obj
+C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\ranlib.exe libglad.a
