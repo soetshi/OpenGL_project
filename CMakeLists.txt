@@ -3,7 +3,7 @@ project(Ini_OpenGL)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(${PROJECT_NAME} main.cpp stb_image.h stb_image.h stb.cpp Texture.cpp)
+add_executable(${PROJECT_NAME} main.cpp stb_image.h stb_image.h stb.cpp Texture.cpp quaternion.h)
 
 add_subdirectory(dependencies/glfw)
 
