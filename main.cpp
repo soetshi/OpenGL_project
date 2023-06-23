@@ -36,6 +36,7 @@ GLfloat rotationZ = 0.0f;
 GLfloat cameraX = 0.0f;
 GLfloat cameraY = 0.0f;
 GLfloat cameraZ = -500.0f;
+GLfloat zoomSpeed = 0.1f;
 
 GLfloat zoom = 1.0f;
 bool isDragging = false;
@@ -102,7 +103,7 @@ int main(void)
 
 
         glPushMatrix();
-        glTranslatef(halfScreenWidth, halfScreenHeight, cameraZ);
+        glTranslatef(halfScreenWidth, halfScreenHeight, cameraZ * zoom);
         glRotatef(rotationX, 1, 0, 0);
         glRotatef(rotationY, 0, 1, 0);
         glTranslatef(-halfScreenWidth - cameraX, -halfScreenHeight - cameraY, 0);
@@ -110,14 +111,14 @@ int main(void)
 
         setupLighting();
         DrawTexturedCube(halfScreenWidth, halfScreenHeight, -500, 200, texturePath);
-       // DrawCube(halfScreenWidth, halfScreenHeight, -500, 200);
-       // DrawSecondCube(halfScreenWidth + 250, halfScreenHeight, -500, 150); // Adjust the position and size of the second cube
-       // DrawThirdCube(halfScreenWidth + 250, halfScreenHeight, -500, 150);
+        // DrawCube(halfScreenWidth, halfScreenHeight, -500, 200);
+        // DrawSecondCube(halfScreenWidth + 250, halfScreenHeight, -500, 150); // Adjust the position and size of the second cube
+        // DrawThirdCube(halfScreenWidth + 250, halfScreenHeight, -500, 150);
 
         rotationZ += rotationSpeed;
 
 
-       // importAndDisplayObj(filePath);
+        // importAndDisplayObj(filePath);
 
         glPopMatrix();
 
@@ -129,8 +130,6 @@ int main(void)
     glfwTerminate();
 
     return 0;
-
-
 }
 
 
@@ -159,8 +158,6 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
     }
 }
 
-
-
 void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 {
     if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
@@ -186,19 +183,17 @@ void cursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
     }
 }
 
-
 void scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 {
-    const GLfloat zoomSpeed = 0.1f;
     zoom += yoffset * zoomSpeed;
-
-    // Limit the zoom range
-    if (zoom < 0.1f) {
+    if (zoom < 0.1f) // Limitez le zoom minimum
         zoom = 0.1f;
-    } else if (zoom > 10.0f) {
-        zoom = 10.0f;
-    }
 }
+
+
+
+
+
 
 // Function to import and display a .obj file object
 void importAndDisplayObj(const std::string& filename) {
