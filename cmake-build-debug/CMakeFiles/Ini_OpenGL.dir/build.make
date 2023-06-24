@@ -113,11 +113,43 @@ CMakeFiles/Ini_OpenGL.dir/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ini_OpenGL.dir/Texture.cpp.s"
 	C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\Texture.cpp -o CMakeFiles\Ini_OpenGL.dir\Texture.cpp.s
 
+CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj: CMakeFiles/Ini_OpenGL.dir/flags.make
+CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj: CMakeFiles/Ini_OpenGL.dir/includes_CXX.rsp
+CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj: C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/skybox.cpp
+CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj: CMakeFiles/Ini_OpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj"
+	C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj -MF CMakeFiles\Ini_OpenGL.dir\skybox.cpp.obj.d -o CMakeFiles\Ini_OpenGL.dir\skybox.cpp.obj -c C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\skybox.cpp
+
+CMakeFiles/Ini_OpenGL.dir/skybox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ini_OpenGL.dir/skybox.cpp.i"
+	C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\skybox.cpp > CMakeFiles\Ini_OpenGL.dir\skybox.cpp.i
+
+CMakeFiles/Ini_OpenGL.dir/skybox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ini_OpenGL.dir/skybox.cpp.s"
+	C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\skybox.cpp -o CMakeFiles\Ini_OpenGL.dir\skybox.cpp.s
+
+CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj: CMakeFiles/Ini_OpenGL.dir/flags.make
+CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj: CMakeFiles/Ini_OpenGL.dir/includes_CXX.rsp
+CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj: C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/camera.cpp
+CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj: CMakeFiles/Ini_OpenGL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj"
+	C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj -MF CMakeFiles\Ini_OpenGL.dir\camera.cpp.obj.d -o CMakeFiles\Ini_OpenGL.dir\camera.cpp.obj -c C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.cpp
+
+CMakeFiles/Ini_OpenGL.dir/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ini_OpenGL.dir/camera.cpp.i"
+	C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.cpp > CMakeFiles\Ini_OpenGL.dir\camera.cpp.i
+
+CMakeFiles/Ini_OpenGL.dir/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ini_OpenGL.dir/camera.cpp.s"
+	C:\Users\axelo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8617.54\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.cpp -o CMakeFiles\Ini_OpenGL.dir\camera.cpp.s
+
 # Object files for target Ini_OpenGL
 Ini_OpenGL_OBJECTS = \
 "CMakeFiles/Ini_OpenGL.dir/main.cpp.obj" \
 "CMakeFiles/Ini_OpenGL.dir/stb.cpp.obj" \
-"CMakeFiles/Ini_OpenGL.dir/Texture.cpp.obj"
+"CMakeFiles/Ini_OpenGL.dir/Texture.cpp.obj" \
+"CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj" \
+"CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj"
 
 # External object files for target Ini_OpenGL
 Ini_OpenGL_EXTERNAL_OBJECTS =
@@ -125,13 +157,15 @@ Ini_OpenGL_EXTERNAL_OBJECTS =
 Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/main.cpp.obj
 Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/stb.cpp.obj
 Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/Texture.cpp.obj
+Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj
+Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj
 Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/build.make
 Ini_OpenGL.exe: dependencies/glfw/src/libglfw3.a
 Ini_OpenGL.exe: libglad.a
 Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/linklibs.rsp
 Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/objects1.rsp
 Ini_OpenGL.exe: CMakeFiles/Ini_OpenGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Ini_OpenGL.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Ini_OpenGL.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Ini_OpenGL.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Ini_OpenGL.dir/Texture.cpp.obj"
   "CMakeFiles/Ini_OpenGL.dir/Texture.cpp.obj.d"
+  "CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj"
+  "CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj.d"
   "CMakeFiles/Ini_OpenGL.dir/main.cpp.obj"
   "CMakeFiles/Ini_OpenGL.dir/main.cpp.obj.d"
+  "CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj"
+  "CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj.d"
   "CMakeFiles/Ini_OpenGL.dir/stb.cpp.obj"
   "CMakeFiles/Ini_OpenGL.dir/stb.cpp.obj.d"
   "Ini_OpenGL.exe"

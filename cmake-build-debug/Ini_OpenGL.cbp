@@ -1649,6 +1649,12 @@
 		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/Texture.cpp">
 			<Option target="Ini_OpenGL"/>
 		</Unit>
+		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/camera.cpp">
+			<Option target="Ini_OpenGL"/>
+		</Unit>
+		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/camera.h">
+			<Option target="Ini_OpenGL"/>
+		</Unit>
 		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/cmake-build-debug/dependencies/glfw/src/glfw_config.h">
 			<Option target="glfw"/>
 		</Unit>
@@ -1935,6 +1941,12 @@
 			<Option target="Ini_OpenGL"/>
 		</Unit>
 		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/quaternion.h">
+			<Option target="Ini_OpenGL"/>
+		</Unit>
+		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/skybox.cpp">
+			<Option target="Ini_OpenGL"/>
+		</Unit>
+		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/skybox.h">
 			<Option target="Ini_OpenGL"/>
 		</Unit>
 		<Unit filename="C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/stb.cpp">

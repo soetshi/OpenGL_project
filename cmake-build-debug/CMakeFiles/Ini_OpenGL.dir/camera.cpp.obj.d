@@ -1,0 +1,19 @@
+CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj: \
+ C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.cpp \
+ C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/dependencies/glew/include/GL/glew.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/inttypes.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/GL/glu.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/GL/gl.h \
+ C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/dependencies/glfw/include/GLFW/glfw3.h \
+ C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.h

@@ -1,5 +1,21 @@
-CMakeFiles/Ini_OpenGL.dir/main.cpp.obj: \
- C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\main.cpp \
+CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj: \
+ C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\skybox.cpp \
+ C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/dependencies/glew/include/GL/glew.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/inttypes.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/GL/glu.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/GL/gl.h \
+ C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/dependencies/glfw/include/GLFW/glfw3.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -13,12 +29,6 @@ CMakeFiles/Ini_OpenGL.dir/main.cpp.obj: \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/postypes.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwchar \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -30,9 +40,6 @@ CMakeFiles/Ini_OpenGL.dir/main.cpp.obj: \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_ptr.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_defines.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cxxabi_init_exception.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/typeinfo \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hash_bytes.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new \
@@ -55,8 +62,6 @@ CMakeFiles/Ini_OpenGL.dir/main.cpp.obj: \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/debug.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/predefined_ops.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdint \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/localefwd.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/clocale \
@@ -135,55 +140,6 @@ CMakeFiles/Ini_OpenGL.dir/main.cpp.obj: \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/math.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/specfun.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/gamma.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/special_function_util.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/bessel_function.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/beta_function.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/ell_integral.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/exp_integral.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/hypergeometric.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/legendre_function.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/modified_bessel_func.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/poly_hermite.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/poly_laguerre.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/riemann_zeta.tcc \
- C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/dependencies/glew/include/GL/glew.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/inttypes.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/GL/glu.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/x86_64-w64-mingw32/include/GL/gl.h \
- C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/dependencies/glfw/include/GLFW/glfw3.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/sstream \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc \
  C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\stb_image.h \
- C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\quaternion.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h \
- C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\SOIL.h \
- C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\dependencies/tinyobjloader/tiny_obj_loader.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uses_allocator.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
- C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
  C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\skybox.h \
  C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.h

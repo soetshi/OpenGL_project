@@ -626,6 +626,30 @@ Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/Texture.cpp.s
 .PHONY : Texture.cpp.s
 
+camera.obj: camera.cpp.obj
+.PHONY : camera.obj
+
+# target to build an object file
+camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj
+.PHONY : camera.cpp.obj
+
+camera.i: camera.cpp.i
+.PHONY : camera.i
+
+# target to preprocess a source file
+camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/camera.cpp.i
+.PHONY : camera.cpp.i
+
+camera.s: camera.cpp.s
+.PHONY : camera.s
+
+# target to generate assembly for a file
+camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/camera.cpp.s
+.PHONY : camera.cpp.s
+
 dependencies/glad/src/glad.obj: dependencies/glad/src/glad.c.obj
 .PHONY : dependencies/glad/src/glad.obj
 
@@ -673,6 +697,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+skybox.obj: skybox.cpp.obj
+.PHONY : skybox.obj
+
+# target to build an object file
+skybox.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj
+.PHONY : skybox.cpp.obj
+
+skybox.i: skybox.cpp.i
+.PHONY : skybox.i
+
+# target to preprocess a source file
+skybox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/skybox.cpp.i
+.PHONY : skybox.cpp.i
+
+skybox.s: skybox.cpp.s
+.PHONY : skybox.s
+
+# target to generate assembly for a file
+skybox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/skybox.cpp.s
+.PHONY : skybox.cpp.s
 
 stb.obj: stb.cpp.obj
 .PHONY : stb.obj
@@ -747,12 +795,18 @@ help:
 	@echo ... Texture.obj
 	@echo ... Texture.i
 	@echo ... Texture.s
+	@echo ... camera.obj
+	@echo ... camera.i
+	@echo ... camera.s
 	@echo ... dependencies/glad/src/glad.obj
 	@echo ... dependencies/glad/src/glad.i
 	@echo ... dependencies/glad/src/glad.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... skybox.obj
+	@echo ... skybox.i
+	@echo ... skybox.s
 	@echo ... stb.obj
 	@echo ... stb.i
 	@echo ... stb.s
