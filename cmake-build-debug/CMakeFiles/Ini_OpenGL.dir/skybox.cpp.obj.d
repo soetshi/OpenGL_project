@@ -142,4 +142,8 @@ CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj: \
  C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
  C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\stb_image.h \
  C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\skybox.h \
- C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.h
+ C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\camera.h \
+ C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\quaternion.h \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
+ C:/Users/axelo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h

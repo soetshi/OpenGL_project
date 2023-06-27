@@ -698,6 +698,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+quaternion.obj: quaternion.cpp.obj
+.PHONY : quaternion.obj
+
+# target to build an object file
+quaternion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/quaternion.cpp.obj
+.PHONY : quaternion.cpp.obj
+
+quaternion.i: quaternion.cpp.i
+.PHONY : quaternion.i
+
+# target to preprocess a source file
+quaternion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/quaternion.cpp.i
+.PHONY : quaternion.cpp.i
+
+quaternion.s: quaternion.cpp.s
+.PHONY : quaternion.s
+
+# target to generate assembly for a file
+quaternion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/quaternion.cpp.s
+.PHONY : quaternion.cpp.s
+
 skybox.obj: skybox.cpp.obj
 .PHONY : skybox.obj
 
@@ -804,6 +828,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... quaternion.obj
+	@echo ... quaternion.i
+	@echo ... quaternion.s
 	@echo ... skybox.obj
 	@echo ... skybox.i
 	@echo ... skybox.s

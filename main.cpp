@@ -24,7 +24,9 @@ struct Face {
 };
 
 
+
 void DrawTexturedCube(GLfloat centerPosX, GLfloat centerPosY, GLfloat centerPosZ, GLfloat edgeLength, const char* texturePath);
+void applyCameraTransformations();
 void setupLighting();
 void importAndDisplayObj(const std::string& filename);
 
@@ -81,6 +83,12 @@ int main(void)
     std::string filename = "C:\\Users\\axelo\\desktop\\Tuto_OpenGL\\OpenGL_project\\Suzanneslav.obj";
     importAndDisplayObj(filename);
 
+
+    cameraRotation.setW(1.0);
+    cameraRotation.setX(0.0);
+    cameraRotation.setY(0.0);
+    cameraRotation.setZ(0.0);
+
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window))
     {
@@ -88,9 +96,8 @@ int main(void)
 
 
         glPushMatrix();
+        applyCameraTransformations();
         glTranslatef(halfScreenWidth, halfScreenHeight, cameraZ * zoom);
-        glRotatef(rotationX, 1, 0, 0);
-        glRotatef(rotationY, 0, 1, 0);
         glTranslatef(-halfScreenWidth - cameraX, -halfScreenHeight - cameraY, 0);
 
 
@@ -99,10 +106,6 @@ int main(void)
         // DrawCube(halfScreenWidth, halfScreenHeight, -500, 200);
         // DrawSecondCube(halfScreenWidth + 250, halfScreenHeight, -500, 150); // Adjust the position and size of the second cube
         // DrawThirdCube(halfScreenWidth + 250, halfScreenHeight, -500, 150);
-
-        rotationZ += rotationSpeed;
-
-
         // importAndDisplayObj(filePath);
 
         glPopMatrix();
@@ -418,6 +421,10 @@ void setupLighting()
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, materialSpecular);
     glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
 }
+
+
+
+
 
 
 

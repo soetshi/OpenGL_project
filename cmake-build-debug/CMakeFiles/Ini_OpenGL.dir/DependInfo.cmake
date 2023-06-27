@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/Texture.cpp" "CMakeFiles/Ini_OpenGL.dir/Texture.cpp.obj" "gcc" "CMakeFiles/Ini_OpenGL.dir/Texture.cpp.obj.d"
   "C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/camera.cpp" "CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj" "gcc" "CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj.d"
   "C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/main.cpp" "CMakeFiles/Ini_OpenGL.dir/main.cpp.obj" "gcc" "CMakeFiles/Ini_OpenGL.dir/main.cpp.obj.d"
+  "C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/quaternion.cpp" "CMakeFiles/Ini_OpenGL.dir/quaternion.cpp.obj" "gcc" "CMakeFiles/Ini_OpenGL.dir/quaternion.cpp.obj.d"
   "C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/skybox.cpp" "CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj" "gcc" "CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj.d"
   "C:/Users/axelo/Desktop/Tuto_OpenGL/OpenGL_project/stb.cpp" "CMakeFiles/Ini_OpenGL.dir/stb.cpp.obj" "gcc" "CMakeFiles/Ini_OpenGL.dir/stb.cpp.obj.d"
   )

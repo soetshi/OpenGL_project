@@ -207,7 +207,7 @@ CMakeFiles/Ini_OpenGL.dir/all: CMakeFiles/glad.dir/all
 CMakeFiles/Ini_OpenGL.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ini_OpenGL.dir\build.make CMakeFiles/Ini_OpenGL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target Ini_OpenGL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target Ini_OpenGL"
 .PHONY : CMakeFiles/Ini_OpenGL.dir/all
 
 # Build rule for subdir invocation for target.
@@ -233,12 +233,12 @@ CMakeFiles/Ini_OpenGL.dir/clean:
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=24,25 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=25 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/glad.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/glad.dir/rule
@@ -337,7 +337,7 @@ dependencies/glfw/src/CMakeFiles/glfw.dir/clean:
 dependencies/glfw/examples/CMakeFiles/boing.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\examples\CMakeFiles\boing.dir\build.make dependencies/glfw/examples/CMakeFiles/boing.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\examples\CMakeFiles\boing.dir\build.make dependencies/glfw/examples/CMakeFiles/boing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=5,6,7 "Built target boing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=6,7,8 "Built target boing"
 .PHONY : dependencies/glfw/examples/CMakeFiles/boing.dir/all
 
 # Build rule for subdir invocation for target.
@@ -363,7 +363,7 @@ dependencies/glfw/examples/CMakeFiles/boing.dir/clean:
 dependencies/glfw/examples/CMakeFiles/gears.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\examples\CMakeFiles\gears.dir\build.make dependencies/glfw/examples/CMakeFiles/gears.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\examples\CMakeFiles\gears.dir\build.make dependencies/glfw/examples/CMakeFiles/gears.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=21,22,23 "Built target gears"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=22,23,24 "Built target gears"
 .PHONY : dependencies/glfw/examples/CMakeFiles/gears.dir/all
 
 # Build rule for subdir invocation for target.
@@ -571,7 +571,7 @@ dependencies/glfw/examples/CMakeFiles/wave.dir/clean:
 dependencies/glfw/tests/CMakeFiles/clipboard.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\clipboard.dir\build.make dependencies/glfw/tests/CMakeFiles/clipboard.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\clipboard.dir\build.make dependencies/glfw/tests/CMakeFiles/clipboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=8,9,10 "Built target clipboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=9,10,11 "Built target clipboard"
 .PHONY : dependencies/glfw/tests/CMakeFiles/clipboard.dir/all
 
 # Build rule for subdir invocation for target.
@@ -597,7 +597,7 @@ dependencies/glfw/tests/CMakeFiles/clipboard.dir/clean:
 dependencies/glfw/tests/CMakeFiles/events.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\events.dir\build.make dependencies/glfw/tests/CMakeFiles/events.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\events.dir\build.make dependencies/glfw/tests/CMakeFiles/events.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=16,17,18 "Built target events"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=17,18,19 "Built target events"
 .PHONY : dependencies/glfw/tests/CMakeFiles/events.dir/all
 
 # Build rule for subdir invocation for target.
@@ -753,7 +753,7 @@ dependencies/glfw/tests/CMakeFiles/reopen.dir/clean:
 dependencies/glfw/tests/CMakeFiles/cursor.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\cursor.dir\build.make dependencies/glfw/tests/CMakeFiles/cursor.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\cursor.dir\build.make dependencies/glfw/tests/CMakeFiles/cursor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target cursor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=12,13 "Built target cursor"
 .PHONY : dependencies/glfw/tests/CMakeFiles/cursor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -779,7 +779,7 @@ dependencies/glfw/tests/CMakeFiles/cursor.dir/clean:
 dependencies/glfw/tests/CMakeFiles/empty.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\empty.dir\build.make dependencies/glfw/tests/CMakeFiles/empty.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\empty.dir\build.make dependencies/glfw/tests/CMakeFiles/empty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=13,14,15 "Built target empty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=14,15,16 "Built target empty"
 .PHONY : dependencies/glfw/tests/CMakeFiles/empty.dir/all
 
 # Build rule for subdir invocation for target.
@@ -805,7 +805,7 @@ dependencies/glfw/tests/CMakeFiles/empty.dir/clean:
 dependencies/glfw/tests/CMakeFiles/gamma.dir/all: dependencies/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\gamma.dir\build.make dependencies/glfw/tests/CMakeFiles/gamma.dir/depend
 	$(MAKE) $(MAKESILENT) -f dependencies\glfw\tests\CMakeFiles\gamma.dir\build.make dependencies/glfw/tests/CMakeFiles/gamma.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=19,20 "Built target gamma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\axelo\Desktop\Tuto_OpenGL\OpenGL_project\cmake-build-debug\CMakeFiles --progress-num=20,21 "Built target gamma"
 .PHONY : dependencies/glfw/tests/CMakeFiles/gamma.dir/all
 
 # Build rule for subdir invocation for target.

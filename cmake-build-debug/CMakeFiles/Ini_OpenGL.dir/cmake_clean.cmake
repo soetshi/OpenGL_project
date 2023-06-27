@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ini_OpenGL.dir/camera.cpp.obj.d"
   "CMakeFiles/Ini_OpenGL.dir/main.cpp.obj"
   "CMakeFiles/Ini_OpenGL.dir/main.cpp.obj.d"
+  "CMakeFiles/Ini_OpenGL.dir/quaternion.cpp.obj"
+  "CMakeFiles/Ini_OpenGL.dir/quaternion.cpp.obj.d"
   "CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj"
   "CMakeFiles/Ini_OpenGL.dir/skybox.cpp.obj.d"
   "CMakeFiles/Ini_OpenGL.dir/stb.cpp.obj"
